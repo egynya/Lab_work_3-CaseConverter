@@ -53,14 +53,14 @@
 **Исходный код (до преобразования в camelCase):**
 ```cpp
 int item_count = 5;
-// item_count остается неизменным в комментарии
+// item_count остается неизменным в в строке для вывода
 std::cout << "item_count = " << item_count;
 ```
 
 **Результат (после преобразования в camelCase):**
 ```cpp
 int itemCount = 5;
-// item_count остается неизменным в комментарии
+// item_count остается неизменным в строке для вывода
 std::cout << "item_count = " << itemCount;
 ```
 
