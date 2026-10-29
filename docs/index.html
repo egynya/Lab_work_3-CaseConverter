@@ -1,0 +1,110 @@
+<!DOCTYPE html><html class="default" lang="en" data-base="./"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>case-converter</title><meta name="description" content="Documentation for case-converter"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar">
+<div class="tsd-toolbar-contents container"><a href="index.html" class="title">case-converter</a>
+<div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/>
+<ul role="listbox" id="tsd-search-results"></ul>
+<div id="tsd-search-status" aria-live="polite" aria-atomic="true">
+<div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></header>
+<div class="container container-main">
+<div class="col-content">
+<div class="tsd-page-title">
+<h1>case-converter</h1></div>
+<div class="tsd-panel tsd-typography"><h1 id="caseconverter" class="tsd-anchor-link">CaseConverter<a href="#caseconverter" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1>
+<p>Плагин для Visual Studio Code, предназначенный для преобразования идентификаторов между различными стилями именования (camelCase, snake_case, PascalCase, kebab-case).</p>
+<p><strong>Автор:</strong> Градусов Егор Александрович<br>
+<strong>Группа:</strong> M3106<br>
+<strong>Среда разработки:</strong> Visual Studio Code<br>
+<strong>Язык реализации:</strong> TypeScript</p>
+<h2 id="описание" class="tsd-anchor-link">Описание<a href="#описание" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p>При работе с исходным кодом часто возникает необходимость привести имена переменных и функций к единому стилю. Плагин CaseConverter автоматизирует этот процесс для выделенного фрагмента кода или отдельного идентификатора.</p>
+<p>В отличие от простых генераторов сниппетов, плагин использует алгоритм контекстного маскирования. Это означает, что строковые литералы и комментарии остаются нетронутыми, а изменения применяются исключительно к именам переменных в самом коде. Также плагин защищает ключевые слова языка от случайного изменения.</p>
+<h2 id="для-кого-этот-плагин" class="tsd-anchor-link">Для кого этот плагин<a href="#для-кого-этот-плагин" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p>Плагин будет полезен следующим категориям пользователей:</p>
+<ul>
+<li><strong>Разработчикам при рефакторинге:</strong> при приведении старого кода к единому корпоративному стандарту (например, при переходе проекта с <code>snake_case</code> на <code>camelCase</code>).</li>
+<li><strong>Программистам-полиглотам:</strong> при переносе логики из одного языка в другой, где приняты разные стили именования (например, из C++ в JavaScript).</li>
+<li><strong>Студентам и учащимся:</strong> для быстрого форматирования кода под требования преподавателя или методички.</li>
+<li><strong>Командам на код-ревью:</strong> для быстрого исправления имен переменных, не соответствующих общему стилю проекта, без ручной перепечатки.</li>
+<li><strong>Специалистам по конфигурациям:</strong> для изменения стиля ключей в JSON или YAML файлах.</li>
+</ul>
+<h2 id="возможности" class="tsd-anchor-link">Возможности<a href="#возможности" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<ul>
+<li>Поддержка четырех стилей именования: camelCase, snake_case, PascalCase, kebab-case.</li>
+<li>Обработка целых блоков кода: плагин находит все идентификаторы в выделении и конвертирует их.</li>
+<li>Умное маскирование: содержимое строк (<code>&quot;...&quot;</code>, <code>'...'</code>) и комментариев (<code>//</code>, <code>/* */</code>) не изменяется.</li>
+<li>Защита синтаксиса: встроенный список зарезервированных слов (C/C++/JS) предотвращает поломку кода.</li>
+</ul>
+<h2 id="установка" class="tsd-anchor-link">Установка<a href="#установка" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<ol>
+<li>Скачайте файл <code>case-converter-0.0.1.vsix</code> из раздела релизов (или соберите его самостоятельно командой <code>vsce package</code>).</li>
+<li>Откройте VS Code, перейдите в раздел расширений (Extensions).</li>
+<li>Нажмите на меню <code>...</code> в правом верхнем углу панели расширений и выберите пункт &quot;Установить из VSIX...&quot; (Install from VSIX...).</li>
+<li>Выберите скачанный файл.</li>
+</ol>
+<h2 id="использование" class="tsd-anchor-link">Использование<a href="#использование" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<ol>
+<li>Откройте файл с исходным кодом (например, <code>.cpp</code>, <code>.js</code>, <code>.ts</code>).</li>
+<li>Выделите переменную или целый блок кода.</li>
+<li>Нажмите <code>Ctrl+Shift+P</code> (или <code>Cmd+Shift+P</code> на macOS) для открытия палитры команд.</li>
+<li>Введите <code>CaseConverter</code> и выберите необходимый стиль из списка:
+<ul>
+<li><code>CaseConverter: to camelCase</code></li>
+<li><code>CaseConverter: to snake_case</code></li>
+<li><code>CaseConverter: to PascalCase</code></li>
+<li><code>CaseConverter: to kebab-case</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="пример-работы" class="tsd-anchor-link">Пример работы<a href="#пример-работы" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<p><strong>Исходный код (до преобразования в camelCase):</strong></p>
+<pre><code class="cpp">int item_count = 5;
+// item_count остается неизменным в комментарии
+std::cout << "item_count = " << item_count;
+</code><button type="button">Copy</button></pre>
+
+<p><strong>Результат (после преобразования в camelCase):</strong></p>
+<pre><code class="cpp">int itemCount = 5;
+// item_count остается неизменным в комментарии
+std::cout << "item_count = " << itemCount;
+</code><button type="button">Copy</button></pre>
+
+<h2 id="документация" class="tsd-anchor-link">Документация<a href="#документация" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<p>Подробная документация API, сгенерированная с помощью TypeDoc, находится в папке <code>docs</code>. Для просмотра откройте файл <code>docs/index.html</code> в любом браузере.</p>
+<h2 id="ограничения" class="tsd-anchor-link">Ограничения<a href="#ограничения" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2>
+<ul>
+<li>Поддерживается только латиница (A-Z, a-z).</li>
+<li>Аббревиатуры не распознаются как отдельные слова (например, <code>HTTPServer</code> будет преобразовано в <code>httpserver</code>).</li>
+<li>Список зарезервированных слов ориентирован в первую очередь на C/C++ и базовый JavaScript.</li>
+</ul>
+</div></div>
+<div class="col-sidebar">
+<div class="page-menu">
+<div class="tsd-navigation settings">
+<details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg>
+<h3>Settings</h3></summary>
+<div class="tsd-accordion-details">
+<div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span>
+<ul id="tsd-filter-options">
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div>
+<div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div>
+<details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg>
+<h3>On This Page</h3></summary>
+<div class="tsd-accordion-details"><a href="#caseconverter"><span>Case<wbr/>Converter</span></a>
+<ul>
+<li><a href="#описание"><span>Описание</span></a></li>
+<li><a href="#для-кого-этот-плагин"><span>Для кого этот плагин</span></a></li>
+<li><a href="#возможности"><span>Возможности</span></a></li>
+<li><a href="#установка"><span>Установка</span></a></li>
+<li><a href="#использование"><span>Использование</span></a></li>
+<li>
+<ul>
+<li><a href="#пример-работы"><span>Пример работы</span></a></li></ul></li>
+<li><a href="#документация"><span>Документация</span></a></li>
+<li><a href="#ограничения"><span>Ограничения</span></a></li></ul></div></details></div>
+<div class="site-menu">
+<nav class="tsd-navigation"><a href="modules.html">case-converter</a>
+<ul class="tsd-small-nested-navigation" id="tsd-nav-container">
+<li>Loading...</li></ul></nav></div></div></div><footer>
+<p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer>
+<div class="overlay"></div></body></html>
